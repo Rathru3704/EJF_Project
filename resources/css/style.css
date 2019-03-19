@@ -1,0 +1,774 @@
+/*----------------------------------*/
+/*Basic Setup*/
+/*----------------------------------*/
+
+/*** New Trick ***/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*** New Trick ***/
+html {
+	font-family: sans-serif;
+	font-weight: 900;
+	font-size: 20px;
+	text-rendering: optimizeLegibility;
+	color: #555;
+	background-color: #fff;
+}
+
+
+/*----------------------------------*/
+/*Reusable Components*/
+/*----------------------------------*/
+
+/***** New Trick *****/
+/*this method can clean the floats*/
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix::after {
+	display: block;
+	height: 0;
+	content: " ";
+	clear: both;
+	visibility: hidden;
+}
+
+/*Font Style*/
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+.Dosis {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 900;
+	text-decoration: none;
+}
+
+.NotoSans {
+	font-family: 'Noto Sans TC', sans-serif;
+	/*font-family: 'cwTeXYen', sans-serif;*/
+	font-weight: 900;
+	font-size: 50px;
+	color: white;
+}
+
+.PassionOneHeading {
+	font-family: 'Passion One', cursive;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 53px;
+}
+
+.PassionOneNormal {
+	font-family: 'Passion One', cursive;
+	font-weight: 400;
+}
+
+.TitanOne {
+	font-family: 'Titan One', cursive;
+	font-weight: 400;
+}
+
+/*Links*/
+.city-features a:link, a:visited {
+	border-bottom: 1.5px solid #fc9132;
+	text-decoration: none;
+	color: #fc9132;
+	transition: 0.2s ease;
+}
+
+.city-features a:hover, a:active {
+	border-bottom: 1px solid transparent;
+	color: #e52604;
+}
+
+/*Icons*/
+.ico-big {
+	margin-bottom: -60px;
+	display: block;
+	font-size: 2.1em;
+	color: #fc9132;
+}
+
+.ico-small {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	color: #fc9132;
+	
+	/***** New Trick *****/
+	/*align text and icons*/
+	vertical-align: middle;
+/*	margin-top: -2px;*/
+	
+}
+
+/*Buttons*/
+.btn {
+	width: 150px;
+	display: inline-block;
+	margin-right: 15px;
+	padding: 7px 16px 7px 15px;
+	border: 3.5px solid #fc9132;
+	border-radius: 50px;
+	box-shadow: 0.05em 0.05em 0.15em rgb(0, 0, 0), 0.05em 0.05em 0.1em #e52604;
+/*	text-shadow: 0.0em 0.0em 0.01em rgb(0, 0, 0), 0 0 0.01em #e52604;*/
+	transition: 0.2s ease;
+	font-size: 1.2em;
+	text-align: center;
+	letter-spacing: 0.1em;
+	word-spacing: 0.1em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.btn-full:link,
+.btn-full:visited {
+	color: white;
+	background-color: #fc9132;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+	color: #fc9132;
+	transition: 0.2s ease;
+}
+
+.btn-full:hover,
+.btn-full:active {
+	border: 3.5px solid #e52604;
+	background-color: #e52604;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+	color: white;
+	border: 3.5px solid #e52604;
+	background-color: #e52604;
+}
+
+/*Headings & Paragraph*/
+h1 {
+	margin: 0 0 0.6em 0;
+	font-size: 400%;
+	line-height: 97%;
+	letter-spacing: 0.07em;
+	word-spacing: 0.07em;
+	text-shadow: 0.05em 0.05em 0.10em rgb(0, 0, 0), 0 0 0.10em #e52604;
+	text-transform: uppercase;
+	color: #fff;
+	/*color: #ffb100;*/
+}
+
+h2 {
+	margin-bottom: 20px;
+	font-size: 2.8em;
+	text-align: center;
+	letter-spacing: 0.03em;
+	word-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #444;
+}
+
+/***** New Trick *****/
+/*The ::after selector inserts something after the content of each selected element(s).*/
+h2::after {
+	display: block;
+	content: " ";
+	margin: 2% auto;
+	width: 250px;
+	height: 6px;
+	background-color: #fc9132;
+}
+
+h3 {
+/*	margin-bottom: 6px;*/
+	font-size: 1.3em;
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	color: #4a4a4a;
+}
+
+h3::after {
+	display: block;
+	content: " ";
+	margin: 2% auto;
+	width: 230px;
+	height: 4px;
+	background-color: #fc9132;
+}
+
+p {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	color: #666;
+}
+
+/***** New Trick *****/
+.content {
+	width: 70%;
+	margin: 20px 0 30px 15%;
+	font-weight: 500;
+/*	letter-spacing: 0.01em;*/
+	text-align: justify;
+}
+
+.content-box {
+	padding: 1.6% 1.6% 0 1.6%;
+}
+
+.content-box p {
+	margin-top: 10px;
+	padding: 0 1%;
+	font-weight: 600;
+	font-size: 1em;
+	line-height: 1.4em;
+	text-align: justify;
+}
+
+.content-box img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+/*----------------------------------*/
+/*Contents*/
+/*----------------------------------*/
+
+/*Header*/
+/***** New Trick *****/
+header {
+	height: 100vh;
+	background-image: radial-gradient(rgba(134, 63, 3, 0.3), rgb(0, 0, 0)), url(img/hero_image.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.row {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.logo {
+	margin-top: 30px;
+	float: left;
+	font-size: 180%;
+/*	text-shadow: 0.05em 0.05em 0.03em rgb(0, 0, 0), 0 0 0.3em #e52604;*/
+	text-decoration-line: underline;
+    text-decoration-style: double;
+	text-decoration-color: #fc9132;
+	color: white;
+}
+
+.main-nav {
+	float: right;
+	list-style: none;
+	margin-top: 44px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-left: 35px;
+}
+
+.main-nav li a:link, a:visited {
+	font-size: 1.2em;
+	letter-spacing: 0.05em;
+	word-spacing: 0.12em;
+/*	text-shadow: 0.05em 0.05em 0.05em rgb(0, 0, 0), 0 0 0.3em #e52604;*/
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	transition: 0.2s;
+	
+	/*** New Trick ***/
+	border-bottom: 3px solid transparent;
+}
+
+.main-nav li a:hover, a:active {
+	color: #e52604;
+	border-bottom: 3px solid #fc9132;
+}
+
+/***** New Trick *****/
+.heroTextBox {
+	max-width: 1140px;
+	position: absolute;
+	top: 54%;
+	left: 50%;
+	padding-right: 18%;
+	transform: translate(-50%, -50%);
+}
+
+/*Features Section*/
+.sec-features {
+	padding: 85px 0;
+}
+
+/*Meals Section*/
+.m-showcase {
+	width: 100%;
+	list-style: none;
+}
+
+.m-showcase li {
+	width: 25%;
+	display: block;
+	float: left;
+}
+
+
+.m-photo {
+	width: 100%;
+	margin: 0;
+	line-height: 0;
+	overflow: hidden;
+	background-color: #000;
+}
+
+.m-photo img {
+	width: 100%;
+	height: auto;
+	
+	/***** New Trick *****/
+	opacity: 0.7;
+	/*with m-photo background-color you can make the img darker*/
+	
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+
+.m-photo img:hover {
+	opacity: 1.0;
+	transform: scale(1.2);
+}
+
+/*Steps Section*/
+.sec-steps {
+	padding: 85px 0;
+	background-color: #ededed;
+}
+
+/*** New Trick ***/
+.steps-box:first-child {
+	text-align: center;
+	margin-top: 30px;
+	padding: 0 10% 0 10%;
+}
+
+.steps-box:last-child {
+	margin-top: 85px;
+	margin-left: -60px;
+	text-align: left;
+}
+
+.steps-box a {
+	float: right;
+}
+
+.steps-box a img:first-child {
+	margin-left: 10px;
+}
+
+.app-screen {
+	width: 80%;
+}
+
+.steps {
+	margin-bottom: 45px;
+}
+
+.steps:last-of-type {
+	margin-bottom: 100px;
+}
+
+.steps div {
+	display: inline-block;
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+	padding: 7px;
+	font-size: 1.2em;
+	text-align: center;
+	border: 4px solid #fc9132;
+	border-radius: 50%;
+	color: #fc9132;
+	
+}
+
+.steps p {
+	font-weight: 500;
+/*	font-size: 1.5em;*/
+	line-height: 1.4em;
+	text-align: justify;
+}
+
+.btn-app:link, .btn-app:visited {
+	border-bottom: 0 transparent;
+}
+
+.btn-app img {
+	width: auto;
+	height: 50px;
+/*	margin-right: 10px;*/
+}
+
+/*Cities Section*/
+.sec-cities {
+	padding: 85px 0;
+}
+
+.sec-cities h3 {
+	text-align: center;
+}
+
+.city-features {
+/*	text-align: left;*/
+	margin: 0 14%;
+}
+
+.city-features p {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 0 1%;
+	font-weight: 600;
+	font-size: 1em;
+	line-height: 0.8em;
+	text-align: center;
+}
+
+/*Testimonials Section*/
+.sec-testimonials {
+/*	height: 100vh;*/
+	padding: 85px 0;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/bg_01.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: white;
+}
+
+.sec-testimonials h2 {
+	margin-bottom: 20px;
+	font-size: 2.8em;
+	text-align: center;
+	letter-spacing: 0.03em;
+	word-spacing: 0.08em;
+	text-transform: uppercase;
+	text-shadow: 0.05em 0.05em 0.10em rgb(0, 0, 0), 0 0 0.10em #e52604;
+	color: #fff;
+}
+
+blockquote {
+	margin-top: 10px;
+	padding: 0 6%;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 500;
+	font-size: 1.1em;
+	font-style: italic;
+	text-align: justify;
+	line-height: 1.45em;
+	letter-spacing: 0.01em;
+}
+
+.cite {
+	display: block;
+	margin-bottom: 15px;
+	text-align: center;
+	font-weight: 500;
+	font-size: 0.8em;
+	font-style: italic;
+	letter-spacing: 0.1em;
+}
+
+.cite img {
+	height: 75px;
+	margin-right: 10px;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
+.quo::before {
+	content: "\201C";
+	font-size: 150%;
+	margin-right: 10px;
+}
+
+.quo::after {
+	content: "\201D";
+	font-size: 150%;
+	margin-left: 5px;
+}
+
+/*Plans Section*/
+.sec-plans {
+	padding: 85px 0;
+	background-color: #ededed;
+}
+
+.sec-plans h2 {
+/*	margin-bottom: 30px;*/
+}
+
+.sec-plans h3 {
+/*	margin: 15px 0;*/
+	padding: 10% 0 0 0%;
+	text-align: right;
+	
+}
+
+.sec-plans h3::after {
+	width: 280px;
+	margin: 2% auto;
+}
+
+.plan-box {
+	width: 90%;
+	margin-left: 5%;
+	border-radius: 10px;
+	box-shadow: 0.05em 0.05em 0.15em rgb(175, 175, 175), 0.05em 0.05em 0.1em rgba(229, 38, 4, 0.29);
+	background-color: #fff;
+}
+
+.plan-box div {
+	margin: 8%;
+	padding-bottom: 2%;
+/*	padding-left: 5%;*/
+	border-bottom: 4px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+/*	background-color: #efefef;*/
+}
+
+.price {
+/*	padding-left: 25px;*/
+	font-family: 'Dosis', sans-serif;
+	font-weight: 400;
+	font-size: 3.5em;
+	text-align: justify;
+}
+
+.price span {
+	padding: 15px 0 0 30px;
+	float: right;
+	font-weight: 500;
+	font-size: 0.4em;
+}
+
+.price-meal {
+	margin-top: -20px;
+	padding: 0 8%;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 500;
+	font-size: 0.9em;
+	letter-spacing: 0.05em;
+	text-align: right;
+}
+
+.plan-box ul {
+	margin-bottom: 5%;
+	list-style: none;
+}
+
+.plan-box li {
+	margin-bottom: 6px;
+	font-weight: 600;
+	font-size: 1em;
+/*	line-height: 1.4em;*/
+}
+
+.plan-box div:last-child {
+	padding-bottom: 23px;
+	text-align: center;
+	border: 0;
+}
+
+.plan-box a {
+	width: 210px;
+	margin: 20px;
+	box-shadow: 0.05em 0.05em 0.15em rgb(216, 216, 216), 0.05em 0.05em 0.1em rgba(229, 38, 4, 0.15);
+}
+
+/*Contact Section*/
+.sec-forms {
+	padding: 85px 0;
+}
+
+.contact {
+	width: 60%;
+	margin: 2% auto 0 19.65%;
+/*	padding-left: 20px;*/
+}
+
+.label-left {
+/*	margin-left: -20px;*/
+	margin-right: -60px;
+	padding: 3px 0 0 0;
+	text-align: left;
+}
+
+.label-left-news {
+/*	margin-left: -20px;*/
+	margin-right: -60px;
+	padding: 0px 0 5px 0;
+	text-align: left;
+}
+
+label {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 600;
+	font-size: 1.3em;
+	
+/*	text-transform: uppercase;*/
+/*	letter-spacing: 0.03em;*/
+/*	word-spacing: 0.3em;*/
+	color: #4a4a4a;
+}
+
+/*** New Trick ***/
+input[type="text"], input[type="email"], select, textarea {
+	width: 60%;
+	margin-left: -66px;
+	padding: 4px 7px 7px 10px;
+	border: 3.5px solid #fc9132;
+	border-radius: 10px;
+	
+	/*** New Trick ***/
+	outline: none;
+	/*
+	also you can use the method below:
+	*:focus {
+		outline: none;
+	}
+	*/
+	
+	box-shadow: 0.05em 0.05em 0.15em rgb(216, 216, 216), 0.05em 0.05em 0.1em rgba(229, 38, 4, 0.15);
+	font-family: 'Dosis', sans-serif;
+	font-weight: 600;
+	font-size: 1em;
+	color: #fc9132;
+}
+
+select option {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 600;
+	font-size: 1em;
+	color: #fc9132;
+}
+
+.yesplz {
+	margin-left: -45px;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 600;
+	font-size: 1em;
+	color: #fc9132;
+}
+
+input[type="checkbox"] {
+	margin: 10px 5px 0px 0px;
+}
+
+textarea {
+	height: 150px;
+}
+
+/*** New Trick ***/
+/* Most modern browsers support this now. */
+::placeholder {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 600;
+	font-size: 1em;
+	color: #fc9132;
+}
+
+.submit-position {
+	margin-top: 7px;
+	padding: 0 0 0 180px;
+}
+
+input[type="submit"] {
+	box-shadow: 0.05em 0.05em 0.15em rgb(216, 216, 216), 0.05em 0.05em 0.1em rgba(229, 38, 4, 0.15);
+	color: #fff;
+	background-color: #fc9132;
+}
+
+/*Footer Section*/
+footer {
+	margin: 20px auto 0 auto;
+	padding: 30px 0;
+	text-align: center;
+	
+	background-color: #2f2f2f;
+}
+
+footer p {
+	margin-top: 10px;
+/*	padding-top: 5px;*/
+	font-family: 'Dosis', sans-serif;
+	font-weight: 600;
+	font-size: 0.5em;
+	letter-spacing: 0.1em;
+	text-align: center;
+	color: #fc9132;
+}
+
+.footer-nav {
+	list-style: none;
+	display: inline-block;
+}
+
+.footer-nav li {
+	display: inline-block;
+	font-size: 15px;
+	letter-spacing: 0.1em;
+	word-spacing: 0.025em;
+	vertical-align: middle;
+	margin-right: 25px;
+}
+
+.footer-nav li:last-child {
+	margin: 0;
+}
+
+.footer-nav .icon-footer:link, .icon-footer:visited {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 900;
+	font-size: 1.1em;
+	letter-spacing: 0.2em;
+	text-decoration: none;
+	transition: 0.2s;
+	border-bottom: 3px solid transparent;
+	color: #fc9132;
+}
+
+.footer-nav .icon-footer:hover, .icon-footer:active {
+	color: #e52604;
+	border-bottom: 3px solid #e52604;
+}
+
+.ion-logo-facebook,
+.ion-logo-twitter,
+.ion-logo-googleplus,
+.ion-logo-instagram {
+	font-size: 25px;
+	transition: 0.2s;
+	color: #fc9132;
+}
+
+
+.ion-logo-facebook:hover, .ion-logo-facebook:active,
+.ion-logo-twitter:hover, .ion-logo-twitter:active,
+.ion-logo-googleplus:hover, .ion-logo-googleplus:active,
+.ion-logo-instagram:hover, .ion-logo-instagram:active {
+	color: #e52604;
+}

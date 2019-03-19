@@ -1,0 +1,27 @@
+/* Big tablets to 1200px */
+@media only screen and (max-width: 1200px) {
+	.heroTextBox {
+		width: 100%;
+		padding: 0 2%;
+	}
+	
+	.row {
+/*		width: 100%;*/
+		padding: 0 2%;
+	}
+}
+
+/* Small tablets to big tablets */
+@media only screen and (max-width: 1023px) {
+	.row { padding: 0 2%; }
+}
+
+/* Small phones to small tablets */
+@media only screen and (max-width: 767px) {
+	
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+	
+}
